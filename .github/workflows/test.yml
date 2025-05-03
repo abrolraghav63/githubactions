@@ -4,6 +4,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: get code
+      uses: actions/checkout@3
     - name: lint
       run: npm run lint
     - name: test
