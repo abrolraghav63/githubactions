@@ -6,6 +6,10 @@ jobs:
     steps:
     - name: get code
       uses: actions/checkout@v3
+    - name: install nuget
+      uses: nuget/setup-node@v3
+      with:
+          node-version: 18
     - name: lint
       run: npm run lint
     - name: test
